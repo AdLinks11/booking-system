@@ -1,0 +1,479 @@
+/*Link for font*/
+@import url('https://use.typekit.net/oov2wcw.css');
+@import url('https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "century-gothic", sans-serif;
+}
+
+    body::-webkit-scrollbar{
+    display: none;
+    }
+
+    body{
+        min-height: 100vh;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat; 
+        background-attachment: fixed;
+    }
+
+/* HEADER SECTION*/
+    header {
+        height: 90px;
+        width:100%;
+        max-width: 100%;
+        display: flex;
+        position:fixed;
+        top: 0;
+        z-index: 1000;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #551f50;
+        color:#c59d40;
+        font-style: italic; 
+        padding: 15px 50px;
+    }
+
+    .school-logo {
+        display: flex;
+        align-items: center;
+    }
+
+    .school-logo img {
+        height: 50px;
+        margin-right: 10px;
+    }
+
+    .school-logo .school-name{
+        font-size: 15px;
+        font-weight: 800;
+        letter-spacing:1.5px;
+    }
+
+/* NAVIGATION BAR */
+    /* Sidebar */
+    .sidebar {
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 100%;
+        width: 300px;
+        background: #551f50;
+        border-left: solid 1.5px #c59d40 ;
+        border-top-left-radius: 20px;
+        transition: transform 0.6s ease-in-out;
+        transform: translateX(100%);
+    }
+
+    .menu-icon {
+        display: flex;
+        font-size: 40px;
+        align-items: center;
+        height: 40px;
+        width: 40px;
+        color: #c59d40;
+        cursor: pointer;
+    }
+
+    .sidebar .menu-bar{
+        height: 80px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 10px;
+        cursor: default;
+    }
+
+    .sidebar .menu-bar i {
+        font-size: 20px;
+        font-weight: 500;
+        color:#c59d40 ;
+        height: 40px;
+        min-width: 40px;
+        text-align: center;
+        line-height: 40px;
+        cursor: pointer;
+        transition: transform 0.6s ease-in-out;
+    }
+    /* Menu Bar Text */
+    .sidebar .menu-bar .text{
+        font-size: 15px;
+        font-weight: 900;
+        letter-spacing: 2px;
+        margin-left:13%;
+        position: absolute;
+        padding:5px;
+        white-space: nowrap;
+    }
+
+    .sidebar .nav-links{
+        height: 100%;
+        padding: 30px 0 0 30px;
+        }
+
+    .sidebar .nav-links li{
+        position: relative;
+        list-style: none;
+        }
+
+    .sidebar .nav-links li a{
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+    }
+
+    /* Option Parent Text */
+    .sidebar .nav-links li a .link-name{
+        font-size: 15px;
+        font-weight: 600;
+        font-style: normal;
+        color: #c59d40;
+        cursor:default;
+    }
+
+    .sidebar .nav-links .link-options{
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        margin: 10px 0 40px 0;
+        padding-left: 20px;
+    }
+
+    .sidebar .nav-links .link-options li{
+        display: flex;
+        align-items: center;
+    }
+
+    .sidebar .nav-links .link-options li i{
+        margin-right: 10px;
+        font-size: 20px;
+    }
+
+    /* Option Text */
+    .sidebar .nav-links .link-options li a{
+        font-size: 12px;
+        font-weight: 550;
+        letter-spacing: 2px;
+        margin: 8px 0;
+        color: #c59d40;
+        white-space: nowrap;
+    }
+
+    .sidebar .nav-links .link-options li:hover, 
+    .sidebar .nav-links .link-options li a:hover {
+        color: #fff;
+        transition: all 0.2s ease;
+    }
+
+    /* Log In */
+    .sidebar .log-in{
+        display: flex;
+        align-items: center;
+        position:absolute;
+        width: 35%;
+        margin: 0 0 30px 0;
+        bottom: 0;
+        left: 160px;
+        gap: 10px;
+    }
+
+    .sidebar .log-in i{
+        font-size: 20px;
+        color: #c59d40;
+    }
+
+    .sidebar .log-in a{
+        font-size: 15px;
+        font-weight: 600;
+        text-decoration: none;
+        color: #c59d40;
+        letter-spacing: 2px;
+    }
+
+    .sidebar .log-in i:hover,
+    .sidebar .log-in a:hover{
+        color: #fff;
+        transition: all 0.2s ease;
+    }
+
+    .sidebar.open{
+        transform: translateX(0);
+    }
+
+    .sidebar.open .menu-bar i{
+        transform: rotate(180deg);
+    }
+
+    /* Main-Content body*/
+    main{
+        height: 100vh;
+        width: 100%;
+        position: relative;
+        padding: 80px 0 0 0;
+        box-sizing: border-box;
+    }
+
+/* INTRO SECTION*/
+    .Intro {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: left;
+        text-align: left;
+        color: #551f50;
+        padding: 0 50px
+    }
+
+    /* Background Home Photo */
+    .Home { 
+        position: relative;
+        background: url('Images/bg2.jpg') no-repeat center center/cover;
+        height: 100vh;
+        width:100%;
+        display: flex;
+    }
+    
+    /* Overlay to darken/lighten the background without affecting text */
+    .Home-overlay {
+        position: absolute;
+        background-attachment: fixed;
+        width: 100%;
+        height: 100%;
+        background: rgba(255, 255, 255, 0.9); /* Adjust opacity here */
+    }
+    
+    /* Ensures text appears on top of the overlay */
+    .Intro-Content {
+        position: relative;
+        max-width: 100%;
+        margin-left: 6%;
+        margin-top: 10%;
+        z-index: 1; /* Puts content above the overlay */
+    }
+
+    .p-hometext {
+        font-size: 16px;
+        margin: 20px 0;
+        color: #551f50;
+        text-align: justify;
+        max-width: 400px; /* Adjust as needed */
+        line-height: 1.5; /* Improves readability */
+    }
+
+    .Intro-Content h2 {
+        font-size: 40px;
+        font-weight: 1000;
+        color: #d4af37;
+        text-shadow: 5px 3px 50px#fcd861;
+        /* horizontal, vertical, shadow */
+    }
+    
+   /* .Intro-Content h3 {
+        font-size: 70px;
+        font-weight: 1000;
+        text-shadow: 10px 2px 80px#ff5eef;
+        color: #551f50;
+    }*/
+        
+     .Intro-Content h3 {
+        font-size: 70px;
+        font-weight: 1000;
+        text-shadow: 10px 4px 10px #551f50;
+        color: #ffffff;
+    }
+
+/* BUTTON SECTION */
+    .journey-btn {
+        display: inline-flex;
+        align-items: center;
+        margin-left: 40px;
+        background-color: #4F1D49; /* Dark purple */
+        color: white;
+        font-weight: bold;
+        font-size: 20px;
+        padding: 8px 20px;
+        border-radius: 50px; /* Rounded button */
+        text-decoration: none;
+        border: 2px solid #4F1D49;
+        transition: 0.3s;
+    }
+
+    .journey-btn .arrow {
+        display: inline-block;
+        margin-left: 10px;
+        background: rgba(255, 255, 255, 0.4);
+        color: #ffffff;
+        border-radius: 50%;
+        padding: 25px;
+        width:  30px;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 18px;
+        margin-right: -8px;
+    }
+
+    .journey-btn:hover {
+        background-color: #d4af37;
+        color: #ffffff;
+        border:none;
+        box-shadow: 8px 5px 10px #7a7a7a;
+    }
+
+    .journey-btn:hover .arrow {
+        color: #ffffff;
+        border:none;
+    }
+
+/* ABOUT SECTION */
+
+    .About {
+        position: relative;
+        background: url('Images/About1.png') no-repeat center center/cover;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 50px;
+    }
+
+    /* The overlay is now a separate pseudo-element */
+    .About::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(255, 255, 255, 0.9); /* Adjust transparency */
+        z-index: 1;
+    }
+
+    /* Ensuring the content stays above the overlay */
+    .About-container {
+        position: relative;
+        display: flex;
+        align-items: center;
+        max-width: 100%;
+        z-index: 2; /* Keeps the content above the overlay */
+    }
+
+    /* The logo is no longer affected by the overlay */
+    .About-logo img {
+        
+        margin-top: 25%;
+        margin-right: 100px;
+        margin-left: -3%;
+        margin-bottom: 10%;
+        width: 90%;  
+        height: auto;  
+        position: relative;
+        z-index: 2; /* Keeps the logo above the overlay */
+    }
+
+    .About-Content {
+        margin-top: 10%;
+        color: #551f50; 
+        position: relative;
+        z-index: 2; 
+        text-align: justify;
+        max-width: 50%;
+        line-height: 1.5;
+ 
+    }
+
+    .About-Content h2 {
+        font-size: 40px;
+        font-weight:bolder;
+        color: #551f50;
+    }
+
+    .About-Content p {
+        font-size: 16px;
+        line-height: 1.6;
+    }
+
+/* TIME LINE SECTION */
+
+    .timeline-section {
+        width: 100%;
+        text-align: left;
+        background-color: #551f50;
+        color: #c59d40;
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 180vh;
+    }
+
+    /* Title */
+    .timeline-title {
+        font-size: 40px;
+        font-weight: bold;
+        margin-bottom: 20px;
+        margin-right: 8%;
+        
+    }
+
+    .timeline {
+        position: relative;
+        border-left: 3px solid #c59d40;
+        padding-left: 8px;
+    }
+
+    /* Timeline Items */
+    .timeline-item {
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 40px;
+        position: relative;
+    }
+
+    /* Circle Dots */
+    .timeline-dot {
+        width: 40px;
+        height: 40px;
+        background-color: #c59d40;
+        border-radius: 50%;
+        position: absolute;
+        left: -30px;
+        top: 5px;
+        border: 3px solid #551f50;
+        margin-top: -10px;
+        box-shadow: -0.2px 0.2px 1px 3px #c59d40;
+    }
+
+    /* Year Label */
+    .year-label {
+        background-color: #c59d40;
+        color: #551f50;
+        font-weight:bolder;
+        padding: 10px 26px;
+        border-radius: 5px;
+        display: inline-block;
+        margin-bottom: 10px;
+        margin-left: 5%;
+        font-size: 18px;
+        text-align: justify;
+    }
+
+    /* Timeline Content */
+    .timeline-content p {
+        font-size: 14px;
+        line-height: 1.5;
+        margin-left: 5%;
+        text-align: justify;
+        max-width: 900px; /* Adjust as needed */
+        line-height: 1.5; /* Improves readability */
+    }

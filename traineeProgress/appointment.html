@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Docallos Institute of Technology</title>
+    <link rel="stylesheet" href="/traineeProgress/progress.css">
+    <link rel="icon" type="image/x-icon" href="/images/favicon_io/favicon.ico">
+</head>
+<body>
+    <header>
+        <div class="school-logo">
+            <img src="/images/ClearLogo.png" class="logo" alt="Docallos Institute of Technology Logo">
+            <span class="school-name">DOCALLOS INSTITUTE OF TECHNOLOGY</span>
+        </div>
+        <div class="menu-icon">
+            <i class='bx bx-menu'></i>
+        </div>
+        <nav class="sidebar">
+            <div class="menu-bar">
+                <i class='bx bxs-left-arrow'></i>
+                <span class="text">HI DOCALLIANS!</span>
+            </div>
+            <ul class="nav-links">
+                <li>
+                    <a href="#"><span class="link-name">MENU</span></a>
+                </li>
+                <ul class="link-options">
+                    <li><i class='bx bx-home'></i><a href="#HomeIdSec">HOME</a></li>
+                    <li><i class='bx bxs-school'></i><a href="#AboutIdSec">ABOUT US</a></li>
+                    <li><i class='bx bx-book'></i><a href="#">COURSES</a></li>
+                    <li><i class='bx bx-question-mark'></i><a href="#">FAQS</a></li>
+                </ul>
+                <li>
+                    <a href="#"><span class="link-name">TOOLS</span></a>
+                </li>
+                <ul class="link-options">
+                    <li><i class="fa-solid fa-arrow-up-from-bracket"></i><a href="#">APPLY TRAINING</a></li>
+                    <li><i class="fa-regular fa-user"></i><a href="#">STUDENT PROFILE</a></li>
+                    <li><i class="fa-solid fa-bars-progress"></i><a href="#">STUDENT PROGRESS</a></li>
+                    <li><i class='bx bx-calendar'></i><a href="#">STUDENT SCHEDULE</a></li>
+                </ul>
+                <div class="log-in">
+                    <i class="fa-solid fa-arrow-right-to-bracket"></i>
+                    <a href="/formPage/login.html">LOGIN</a>
+                </div>
+            </ul>
+        </nav>
+    </header>
+    
+    <main id="trainee-appointment">
+        <div class="trainee-grid-container">
+            <div class="trainee-progress-header">
+                <h1>TRAINEE PROGRESS</h1>
+                <div class="trainee-progress-step">
+                    <span class="trainee-step-number">2</span>
+                    <span class="trainee-step-text">Appointment</span>
+                    <i class='bx bx-chevron-down'></i>
+                </div>
+            </div>
+            <form id="trainee-appointment-form">
+                <p class="trainee-instruction-text">Choose a convenient option for your Training Schedule</p>
+                <div class="course-container">
+                    <div class="trainee-field trainee-input-field selectTraining">
+                        <select name="courseAvailable" class="select-training">
+                            <option value="" disabled selected>Select Training</option>
+                            <!-- Trainings will be coming from database/admin -->
+                        </select>
+                    </div>
+                    <div class="schedule-list">
+                        <div class="schedule-header">
+                            <h3>Available Schedules</h3>
+                            <div class="price-container">
+                                <h4>Price:</h4>
+                                <span class="coursePrices"></span>
+                            </div>
+                        </div>
+                        <div class="schedule-item">
+                            <input type="checkbox" name="schedule" value="1">
+                            <div class="date-time">
+                                <span><i class='bx bx-calendar'></i>November 28, 2024</span>
+                                <span><i class='bx bx-time-five'></i>8:00am-5pm</span>
+                            </div>
+                            <div class="training-capacity">
+                                <i class='bx bx-user'></i>
+                                <span>10/10</span>
+                            </div>
+                        </div>
+                        <div class="schedule-item">
+                            <input type="checkbox" name="schedule" value="2">
+                            <div class="date-time">
+                                <span><i class='bx bx-calendar'></i>Date</span>
+                                <span><i class='bx bx-time-five'></i>Time</span>
+                            </div>
+                            <div class="training-capacity">
+                                <i class='bx bx-user'></i>
+                                <span>10/10</span>
+                            </div>
+                        </div>
+                        <div class="schedule-item">
+                            <input type="checkbox" name="schedule" value="3">
+                            <div class="date-time">
+                                <span><i class='bx bx-calendar'></i>Date</span>
+                                <span><i class='bx bx-time-five'></i>Time</span>
+                            </div>
+                            <div class="training-capacity">
+                                <i class='bx bx-user'></i>
+                                <span>10/10</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="trainee-payment-container">
+                    <p class="trainee-instruction-text">Kindly settle a ₱500 down payment and keep your receipt. <br><b>Note:</b> Down payments are non-refundable.</p>
+
+                    <div class="payment-reference-field">
+                        <div class="trainee-field trainee-input-field payment-reference-input">
+                            <input type="text" placeholder="Reference Number" class="paymentReferenceNumber" name="referenceNumber" required>
+                        </div>
+                        <div class="payment-options">
+                            <label class="payment-option-label">
+                                <input type="checkbox" class="bpiPayment" name="BPI">
+                                BPI: ************
+                            </label>
+                            <label class="payment-option-label">
+                                <input type="checkbox" class="gcashPayment" name="gcash">
+                                Gcash: 09456704280
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="payment-proof-field">
+                        <div class="trainee-field trainee-input-field proof-of-payment">
+                            <label>Proof of Payment
+                                <input type="file" placeholder="Screenshot of Payment" class="proofOfPayment" name="proofOfPayment" accept="image/png, image/jpeg" capture="user">
+                            </label>
+                        </div>
+                        <div class="trainee-field trainee-input-field document-identity">
+                            <label>Valid ID
+                                <input type="file" placeholder="Valid Id" class="validId" name="validId" accept="image/png, image/jpeg">
+                            </label>
+                        </div>
+                    </div>
+
+                    <p class="trainee-note-text">Not available on these dates? Bookmark this page and check back again in a few days to see new schedules!</p>
+
+                    <div class="trainee-button-field">
+                        <button type="submit">Submit</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </main>
+    <script src="../content.js"></script>
+</body>
+</html>

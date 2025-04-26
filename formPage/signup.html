@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Sign-In</title>
+    <link rel="stylesheet" href="../formPage/form.css">
+    <link rel="icon" type="image/x-icon" href="../images/favicon_io/favicon.ico">
+    <!-- Box Icons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <nav class="form-navbar">
+            <!-- Hidden Sidebar -->
+            <ul class="sidebarForm">
+                <li><i class="fa-solid fa-x" onclick="hidesidebarForm()"></i></li>
+                <li><a href="#">HOME</a></li>
+                <li><a href="#">ABOUT US</a></li>
+                <li><a href="#">COURSES</a></li>
+                <li><a href="#">FAQS</a></li>
+            </ul>
+
+            <!-- Main Navigation -->
+            <ul>
+                <div class="school-logo">
+                    <img src="../images/ClearLogo.png" class="logo" alt="Docallos Institute of Technology Logo">
+                    <span class="school-name">DOCALLOS INSTITUTE OF TECHNOLOGY</span>
+                </div>
+                <li class="hideOnMobile"><a href="../homePage/home.html">HOME</a></li>
+                <li class="hideOnMobile"><a href="#">ABOUT US</a></li>
+                <li class="hideOnMobile"><a href="#">COURSES</a></li>
+                <li class="hideOnMobile"><a href="#">FAQS</a></li>
+                <li class="menu-icon-form"><i class='bx bx-menu' onclick="showsidebarForm()"></i></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Sign-In Form -->
+    <main class="container forms">
+        <div class="form-login">
+            <div class="form-content">
+                <header id="form-header">Sign Up</header>
+                <span class="form-text">Create an account to access our services and save your enrollment progress.</span>
+                <hr>
+                <form action="http://localhost:3000/signup" method="POST">
+
+                    <div class="field input email-field">
+                        <input type="email" class="userEmail" placeholder="Enter Your Email Address" name="email" required>
+                    </div> 
+                    <span class="error email error">
+                        <i class='bx bx-error-circle'></i>
+                        <p class="error-messages">Please enter a valid email</p>
+                    </span>
+                    <span class="error email error email-exist">
+                        <i class='bx bx-error-circle'></i>
+                        <p class="error-messages">Email Already Exist!</p> 
+                    </span>
+                    
+                    <div class="field input create-password">
+                        <input type="password" placeholder="Create Password" class="password" name="password" required>
+                        <i class='bx bxs-hide eye-icon'></i>
+                    </div>
+                    <span class="error password-error">
+                        <i class='bx bx-error-circle'></i>
+                        <p class="error-messages">Please enter at least 8 characters with number, symbol, small and capital letter.</p>
+                    </span>
+
+                    <div class="field input confirm-password">
+                        <input type="password" placeholder="Confirm Password" class="cPassword" name="confirm_password" required>
+                        <i class='bx bxs-hide eye-icon'></i>
+                    </div>
+                    <span class="error password-error">
+                        <i class='bx bx-error-circle'></i>
+                        <p class="error-messages">Password doesn't match</p>
+                    </span>
+
+                    <div class="signup_Agreement">
+                        <input type="checkbox" id="termsCheck" name="termsCheck" required>
+                        <label for="termsCheck">I have read, understand, and agree to Docallos' 
+                            <a href="#" class="policy-link">Privacy Policy</a> and 
+                            <a href="#" class="policy-link">Terms of Service</a>
+                        </label>
+                    </div>
+
+                    <div class="field button-field">
+                        <button type="submit">Submit</button>
+                    </div>
+                    
+                    <div class="form-link">
+                        <div class="form-text">
+                            Already have an account? <a href="/formPage/login.html" id="sign-up-link">Login!</a>
+                        </div>
+                    </div>                    
+                    <div class="separator">
+                        <span>or</span>
+                    </div>
+                    <div class="form-icon-links">
+                        <a href="#"><i class="fa-brands fa-square-facebook"></i></a>
+                        <a href="#"><i class="fa-solid fa-square-envelope"></i></a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>About Us</h3>
+                <ul>
+                    <li><a href="../homePage/home.html">About Docallos</a></li>
+                    <li><a href="#">Journey</a></li>
+                    <li><a href="#">Founder</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Courses</h3>
+                <ul>
+                    <li><a href="#">Enroll</a></li>
+                    <li><a href="#">Training Offers</a></li>
+                    <li><a href="#">Courses Slots</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <ul>
+                    <li><a href="https://web.facebook.com/DocallosInstituteofTechnology" target="_blank"><i class="fa-brands fa-facebook"></i> Facebook Page</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <ul>
+                    <li><a href="https://maps.app.goo.gl/qvwRAVBWWcXUrNNB6" target="_blank"><i class="fa-solid fa-location-dot"></i>Quirino Highway, Caloocan, Qc.</a></li>
+                    <li><a href="tel:+6309177720104"><i class="fa-solid fa-mobile-alt" target="_blank"></i> 09177720104</a></li>
+                    <li><a href="mailto:docallosinstituteoftechnology@gmail.com" target="_blank"><i class="fa-solid fa-envelope"></i>docallosinstituteoftechnology</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="../formPage/script.js"></script>
+</body>
+</html>

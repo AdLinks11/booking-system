@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Sign-In</title>
+    <link rel="stylesheet" href="../formPage/form.css">
+    <link rel="icon" type="image/x-icon" href="/images/favicon_io/favicon.ico">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    <header>
+        <nav class="form-navbar">
+            <!-- Hidden Sidebar -->
+            <ul class="sidebarForm">
+                <li><i class="fa-solid fa-x" onclick="hidesidebarForm()"></i></li>
+                <li><a href="#">HOME</a></li>
+                <li><a href="#">ABOUT US</a></li>
+                <li><a href="#">COURSES</a></li>
+                <li><a href="#">FAQS</a></li>
+            </ul>
+
+            <!-- Main Navigation -->
+            <ul>
+                <div class="school-logo">
+                    <img src="../images/ClearLogo.png" class="logo" alt="Docallos Institute of Technology Logo">
+                    <span class="school-name">DOCALLOS INSTITUTE OF TECHNOLOGY</span>
+                </div>
+                <li class="hideOnMobile"><a href="../homePage/home.html">HOME</a></li>
+                <li class="hideOnMobile"><a href="#">ABOUT US</a></li>
+                <li class="hideOnMobile"><a href="#">COURSES</a></li>
+                <li class="hideOnMobile"><a href="#">FAQS</a></li>
+                <li class="menu-icon-form"><i class='bx bx-menu' onclick="showsidebarForm()"></i></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Sign-In Form -->
+    <main class="container forms">
+        <div class="form-login">
+            <div class="form-content">
+                <header id="form-header">Sign In</header>
+                <span class="form-text">Sign in with your registered email address to proceed.</span>
+                <hr>
+
+                <form action="http://localhost:3000/login" method="POST">
+                    <div class="field input email-field">
+                        <input type="email" placeholder="Email" required class="email" id="email_login" name="email">
+                    </div>
+                    <div class="field input-field">
+                        <input type="password" placeholder="Password" class="password" id="password_login" name="password" required>
+                        <i class='bx bxs-hide eye-icon'></i>
+                    </div>
+                    <div class="remember-me">
+                        <label for="rememberCheck">
+                            <input type="checkbox" id="rememberCheck" name="rememberCheck">Remember Me
+                        </label>
+                    </div>
+                    
+                    <div class="error-container"></div>
+                
+                    <div class="form-link">
+                        <a href="#" class="forgot-pass">Forgot Password?</a>
+                    </div>
+                
+                    <div class="field button-field">
+                        <button type="submit">Login</button>
+                    </div>
+                    <div class="form-link">
+                        <div class="form-text">
+                            Don't have an account yet? <a href="/formPage/signup.html" id="sign-up-link">Sign Up!</a>
+                        </div>
+                    </div>                    
+                    <div class="separator">
+                        <span>or</span>
+                    </div>
+                    <div class="form-icon-links">
+                        <a href="#"><i class="fa-brands fa-square-facebook"></i></a>
+                        <a href="#"><i class="fa-solid fa-square-envelope"></i></a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>About Us</h3>
+                <ul>
+                    <li><a href="../homePage/home.html">About Docallos</a></li>
+                    <li><a href="#">Journey</a></li>
+                    <li><a href="#">Founder</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Courses</h3>
+                <ul>
+                    <li><a href="#">Enroll</a></li>
+                    <li><a href="#">Training Offers</a></li>
+                    <li><a href="#">Courses Slots</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <ul>
+                    <li><a href="https://web.facebook.com/DocallosInstituteofTechnology" target="_blank"><i class="fa-brands fa-facebook"></i> Facebook Page</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <ul>
+                    <li><a href="https://maps.app.goo.gl/qvwRAVBWWcXUrNNB6" target="_blank"><i class="fa-solid fa-location-dot"></i>Quirino Highway, Caloocan, Qc.</a></li>
+                    <li><a href="tel:+6309177720104"><i class="fa-solid fa-mobile-alt" target="_blank"></i> 09177720104</a></li>
+                    <li><a href="mailto:docallosinstituteoftechnology@gmail.com" target="_blank"><i class="fa-solid fa-envelope"></i>docallosinstituteoftechnology</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="../formPage/script.js"></script>
+</body>
+</html>

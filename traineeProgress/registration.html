@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Docallos Institute of Technology</title>
+
+    <!-- Link to CSS -->
+    <link rel="stylesheet" href="/traineeProgress/progress.css">
+    <link rel="icon" type="image/x-icon" href="/images/favicon_io/favicon.ico">
+</head>
+
+<body>
+    <header>
+        <div class="school-logo">
+            <img src="/images/ClearLogo.png" class="logo" alt="Docallos Institute of Technology Logo">
+            <span class="school-name">DOCALLOS INSTITUTE OF TECHNOLOGY</span>
+        </div>
+
+        <div class="menu-icon">
+            <i class='bx bx-menu'></i>
+        </div>
+
+        <!-- Sidebar -->
+        <nav class="sidebar">
+            <div class="menu-bar">
+                <i class='bx bxs-left-arrow'></i> <!-- Close button -->
+                <span class="text">HI DOCALLIANS!</span>
+            </div>
+
+            <!-- Navigation Links -->
+            <ul class="nav-links">
+                <li>
+                    <a href="#">
+                        <span class="link-name">MENU</span>
+                    </a>
+                </li>
+                <ul class="link-options">
+                    <li>
+                        <i class='bx bx-home'></i>
+                        <a href="#HomeIdSec">HOME</a>
+                    </li>
+                    <li>
+                        <i class='bx bxs-school'></i>
+                        <a href="#AboutIdSec">ABOUT US</a>
+                    </li>
+                    <li>
+                        <i class='bx bx-book'></i>
+                        <a href="#">COURSES</a>
+                    </li>
+                    <li>
+                        <i class='bx bx-question-mark'></i>
+                        <a href="#">FAQS</a>
+                    </li>
+                </ul>
+                <li>
+                    <a href="#">
+                        <span class="link-name">TOOLS</span>
+                    </a>
+                </li>
+                <ul class="link-options">
+                    <li>
+                        <i class="fa-solid fa-arrow-up-from-bracket"></i>
+                        <a href="#">APPLY TRAINING</a>
+                    </li>
+                    <li>
+                        <i class="fa-regular fa-user"></i>
+                        <a href="#">STUDENT PROFILE</a>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-bars-progress"></i>
+                        <a href="#">STUDENT PROGRESS</a>
+                    </li>
+                    <li>
+                        <i class='bx bx-calendar'></i>
+                        <a href="#">STUDENT SCHEDULE</a>
+                    </li>
+                </ul>
+
+                <!-- Login/Logout Section -->
+                <div class="log-in">
+                    <i class="fa-solid fa-arrow-right-to-bracket"></i>
+                    <a href="/formPage/login.html">LOGIN</a>
+                </div>
+            </ul>
+        </nav>
+    </header>
+    
+    <main id="trainee-registration">
+        <div class="trainee-grid-container">
+            <div class="trainee-progress-header">
+                <h1>TRAINEE PROGRESS</h1>
+                <div class="trainee-progress-step">
+                    <span class="trainee-step-number">1</span>
+                    <span class="trainee-step-text">Registration</span>
+                    <i class='bx bx-chevron-down'></i>
+                </div>
+            </div>
+            <form id="trainee-progress-form">
+                <p class="trainee-required-text">ALL FIELDS ARE REQUIRED</p>
+                
+                <!--  Input Fields -->
+                <div class="trainee-field trainee-input-field">
+                    <input type="text" placeholder="First Name" class="trainee-first-name" name="firstName" required>
+                </div>
+                <div class="trainee-field trainee-input-field">
+                    <input type="text" placeholder="Last Name" class="trainee-last-name" name="lastName" required>
+                </div>
+                <div class="trainee-field trainee-input-field">
+                    <input type="text" placeholder="Suffix" class="trainee-suffix" name="suffix">
+                </div>
+
+                <!-- Birthdate and Sex Fields -->
+                <hr>
+                <div class="trainee-birthdate-field">
+                    <div class="trainee-field trainee-input-field trainee-birthdate-input">
+                        <select name="birthMonth" class="trainee-birth-month" required>
+                            <option value="" disabled selected>Month</option>
+                            <option value="January">January</option>
+                            <option value="February">February</option>
+                            <option value="March">March</option>
+                            <option value="April">April</option>
+                            <option value="May">May</option>
+                            <option value="June">June</option>
+                            <option value="July">July</option>
+                            <option value="August">August</option>
+                            <option value="September">September</option>
+                            <option value="October">October</option>
+                            <option value="November">November</option>
+                            <option value="December">December</option>
+                        </select>
+                    </div>
+                    
+                    <div class="trainee-field trainee-input-field trainee-birthdate-input">
+                        <select name="birthDay" class="trainee-birth-day" required>
+                            <option value="" disabled selected>Day</option>
+                            <!-- Dynamically populate days in JavaScript -->
+                        </select>
+                    </div>
+                    <div class="trainee-field trainee-input-field trainee-birthdate-input">
+                        <select name="birthYear" class="trainee-birth-year" required>
+                            <option value="" disabled selected>Year</option>
+                            <!-- Dynamically populate years in JavaScript -->
+                        </select>
+                    </div>
+                </div>
+                <div class="trainee-field trainee-input-field">
+                    <select name="sex" class="trainee-sex" required>
+                        <option value="" disabled selected>Sex</option>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                    </select>
+                </div>
+
+                <hr>
+                <!-- Contact Information -->
+                <div class="trainee-field trainee-input-field">
+                    <input type="email" placeholder="Email Address" class="trainee-email" name="email" required>
+                </div>
+                <div class="trainee-field trainee-input-field">
+                    <input type="tel" placeholder="Contact Number" class="trainee-contact-number" name="contactNumber" required>
+                </div>
+
+                <hr>
+                <!-- Address Fields -->
+                <div class="trainee-field trainee-input-field">
+                    <input type="text" placeholder="City" class="trainee-city" name="city" required>
+                </div>
+                <div class="trainee-field trainee-input-field">
+                    <input type="text" placeholder="House #" class="trainee-house-number" name="houseNumber" required>
+                </div>
+                <div class="trainee-field trainee-input-field">
+                    <input type="text" placeholder="Street" class="trainee-street" name="street" required>
+                </div>
+                <div class="trainee-field trainee-input-field">
+                    <input type="text" placeholder="Barangay" class="trainee-barangay" name="barangay" required>
+                </div>
+
+                <!-- Terms Checkbox -->
+                <div class="trainee-terms-check">
+                    <label for="trainee-terms-check">
+                    <input type="checkbox" id="trainee-terms-check" name="termsCheck" required>
+                    If you have reviewed your details above, please check the box to proceed.<a href="#"></label>
+                </div>
+
+                <!-- Submit Button -->
+                <div class="trainee-field trainee-button-field">
+                    <button type="submit">Submit</button>
+                </div>
+            </form>
+        </div>
+    </main>
+    <script src="../content.js"></script>
+</body>
+</html>
